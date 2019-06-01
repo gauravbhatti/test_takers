@@ -1,0 +1,18 @@
+<h1>Upload File</h1>
+
+
+<%= form_for :user, url: upload_users_path(@user), method: :post, multipart: true do |f| %>
+
+  <div class="field">
+    <%= f.label "Data File" %>
+    <%= f.file_field :file, accept: ".csv,.json" %>
+  </div>
+
+  <br>
+  <br>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>
